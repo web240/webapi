@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <title>1.2购物车型拖放</title>
+    <link href="../Content/themes/default/easyui.css" rel="stylesheet" />
+    <link href="../Content/themes/icon.css" rel="stylesheet" />
+</head>
+<body>
+
+    <!--显示产品页：-->
+    <ul class="products">
+        <li>
+            <a href="#" class="item">
+                <img src="./images/img.gif" />
+                <div>
+                    <p>Balloon</p>
+                    <p>Price:$25</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="item">
+                <img src="./images/img.gif" />
+                <div>
+                    <p>Feeling</p>
+                    <p>Price:$25</p>
+                </div>
+            </a>
+        </li>
+        <!-- other products -->
+    </ul>
+
+    <!--创建购物车：-->
+    <div class="cart">
+        <h1>Shopping Cart</h1>
+        <table id="cartcontent" style="width:300px;height:auto;">
+            <thead>
+                <tr>
+                    <th field="name" width=140>Name</th>
+                    <th field="quantity" width=60 align="right">Quantity</th>
+                    <th field="price" width=60 align="right">Price</th>
+                </tr>
+            </thead>
+        </table>
+        <p class="total">Total: $0</p>
+        <h2>Drop here to add to cart</h2>
+    </div>
+
+
+    <script src="../Scripts/jquery-1.11.3.min.js"></script>
+    <script src="../Scripts/jquery.easyui-1.4.5.min.js"></script>
+    <script>
+		$(function(){
+
+		//拖曳产品副本
+$('.item').draggable({
+    revert:true,
+    proxy:'clone',
+    onStartDrag:function(){
+        $(this).draggable('options').cursor = 'not-allowed';
+        $(this).draggable('proxy').css('z-index',10);
+    },
+    onStopDrag:function(){
+        $(this).draggable('options').cursor='move';
+    }
+});
+
+		//将选择的产品放入购物车
+$('.cart').droppable({
+    onDragEnter:function(e,source){
+        $(source).draggable('options').cursor='auto';
+    },
+    onDragLeave:function(e,source){
+        $(source).draggable('options').cursor='not-allowed';
+    },
+    onDrop:function(e,source){
+        var name = $(source).find('p:eq(0)').html();
+        var price = $(source).find('p:eq(1)').html();
+        addProduct(name, parseFloat(price.split('$')[1]));
+    }
+});
+var data = {"total":0,"rows":[]};
+var totalCost = 0;
+function addProduct(name,price){
+    function add(){
+        for(var i=0; i<data.total; i++){
+            var row = data.rows[i];
+            if (row.name == name){
+                row.quantity += 1;
+                return;
+            }
+        }
+        data.total += 1;
+        data.rows.push({
+            name:name,
+            quantity:1,
+            price:price
+        });
+    }
+    add();
+    totalCost += price;
+    $('#cartcontent').datagrid('loadData', data);
+    $('div.cart .total').html('Total: $'+totalCost);
+}
+
+
+		})
+    </script>
+</body>
+</html>

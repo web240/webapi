@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <title>1.1基本拖放</title>
+    <link href="../Content/themes/default/easyui.css" rel="stylesheet" />
+    <link href="../Content/themes/icon.css" rel="stylesheet" />
+	<style>
+		#dd1,#dd2,#dd3,.proxy{width:100px;height:100px;border:solid 1px #f00;}
+	</style>
+</head>
+<body>
+    <div id="dd1">dd1</div>
+    <div id="dd2">dd2</div>
+    <div id="dd3">dd3</div>
+    <script src="../Scripts/jquery-1.11.3.min.js"></script>
+    <script src="../Scripts/jquery.easyui-1.4.5.min.js"></script>
+    <script>
+		$(function(){
+
+		$("#dd1").draggable();
+
+		$("#dd2").draggable({proxy:'clone'});
+
+		$("#dd3").draggable({
+		proxy:function(source){
+		var p=$('<div class="proxy">proxy</div>');
+		p.appendTo('body');
+		return p;
+		}
+		});
+
+		})
+    </script>
+</body>
+</html>
