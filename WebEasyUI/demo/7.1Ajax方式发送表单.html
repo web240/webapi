@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="../Content/themes/default/easyui.css" rel="stylesheet" />
+    <link href="../Content/themes/icon.css" rel="stylesheet" />
+</head>
+<body>
+    <div style="width:230px;background:#E0ECFF;padding:10px;">
+        <form id="ff" action="/demo5/ProcessServlet" method="post">
+            <table>
+                <tr>
+                    <td>Name:</td>
+                    <td><input name="name" type="text"></input></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><input name="email" type="text"></input></td>
+                </tr>
+                <tr>
+                    <td>Phone:</td>
+                    <td><input name="phone" type="text"></input></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Submit"></input></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <script src="../Scripts/jquery-1.11.3.min.js"></script>
+    <script src="../Scripts/jquery.easyui-1.4.5.min.js"></script>
+    <script>
+        $('#ff').form({
+            success: function (data) {
+                $.messager.alert('Info', data, 'info');
+            }
+        });
+
+    </script>
+</body>
+</html>

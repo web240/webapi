@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="../Content/themes/default/easyui.css" rel="stylesheet" />
+    <link href="../Content/themes/icon.css" rel="stylesheet" />
+</head>
+<body>
+    <table id="tt"></table>
+    <script src="../Scripts/jquery-1.11.3.min.js"></script>
+    <script src="../Scripts/jquery.easyui-1.4.5.min.js"></script>
+    <script>
+        $('#tt').datagrid({
+            title: 'Formatting Columns',
+            width: 550,
+            height: 250,
+            url: 'datagrid_data.json',
+            columns: [[
+                { field: 'itemid', title: 'Item ID', width: 80 },
+                { field: 'productid', title: 'Product ID', width: 80 },
+                {
+                    field: 'listprice', title: 'List Price', width: 80, align: 'right',
+                    formatter: function (val, rec) {
+                        if (val < 20) {
+                            return '<span style="color:red;">(' + val + ')</span>';
+                        } else {
+                            return val;
+                        }
+                    }
+                },
+                { field: 'unitcost', title: 'Unit Cost', width: 80, align: 'right' },
+                { field: 'attr1', title: 'Attribute', width: 100 },
+                { field: 'status', title: 'Status', width: 60 }
+            ]]
+        });
+
+    </script>
+</body>
+</html>

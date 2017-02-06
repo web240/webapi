@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="../Content/themes/default/easyui.css" rel="stylesheet" />
+    <link href="../Content/themes/icon.css" rel="stylesheet" />
+</head>
+<body>
+    <!--默认的窗口有4个工具：collapsible（可折叠）,minimizable（最小化）,maximizable（最大化） 和closable（关闭），例如，我们定义下列窗口：-->
+    <div id="win" class="easyui-window" title="My Window" style="padding:10px;width:200px;height:100px;">
+        window content
+    </div>
+
+    <script src="../Scripts/jquery-1.11.3.min.js"></script>
+    <script src="../Scripts/jquery.easyui-1.4.5.min.js"></script>
+    <script>
+        $('#win').window({
+            collapsible: false,
+            minimizable: false,
+            maximizable: false
+        });
+
+        $('#win').window({
+            collapsible: false,
+            minimizable: false,
+            maximizable: false,
+            tools: [{
+                iconCls: 'icon-add',
+                handler: function () {
+                    alert('add');
+                }
+            }, {
+                iconCls: 'icon-remove',
+                handler: function () {
+                    alert('remove');
+                }
+            }]
+        });
+
+    </script>
+</body>
+</html>

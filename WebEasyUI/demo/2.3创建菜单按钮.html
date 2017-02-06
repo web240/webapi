@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>2.3创建菜单按钮</title>
+    <meta charset="utf-8" />
+    <link href="../Content/themes/default/easyui.css" rel="stylesheet" />
+    <link href="../Content/themes/icon.css" rel="stylesheet" />
+</head>
+<body>
+    <div style="background:#C9EDCC;padding:5px;width:200px;">
+        <a href="javascript:void(0)" id="mb1" icon="icon-edit">Edit</a>
+        <a href="javascript:void(0)" id="mb2" icon="icon-help">Help</a>
+    </div>
+    <div id="mm1" style="width:150px;">
+        <div icon="icon-undo">Undo</div>
+        <div icon="icon-redo">Redo</div>
+        <div class="menu-sep"></div>
+        <div>Cut</div>
+        <div>Copy</div>
+        <div>Paste</div>
+        <div class="menu-sep"></div>
+        <div icon="icon-remove">Delete</div>
+        <div>Select All</div>
+    </div>
+    <div id="mm2" style="width:100px;">
+        <div>Help</div>
+        <div>Update</div>
+        <div>About</div>
+    </div>
+
+    <script src="../Scripts/jquery-1.11.3.min.js"></script>
+    <script src="../Scripts/jquery.easyui-1.4.5.min.js"></script>
+    <script>
+        $(function () {
+
+            $('#mb1').menubutton({ menu: '#mm1' });
+            $('#mb2').menubutton({ menu: '#mm2' });
+
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>2.1创建简单菜单</title>
+	<meta charset="utf-8" />
+    <link href="../Content/themes/default/easyui.css" rel="stylesheet" />
+    <link href="../Content/themes/icon.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="mm" style="width:120px;">
+        <div onclick="javascript:alert('new')">New</div>
+        <div>
+            <span>Open</span>
+            <div style="width:150px;">
+                <div><b>Word</b></div>
+                <div>Excel</div>
+                <div>PowerPoint</div>
+            </div>
+        </div>
+        <div icon="icon-save">Save</div>
+        <div class="menu-sep"></div>
+        <div>Exit</div>
+    </div>
+
+    <script src="../Scripts/jquery-1.11.3.min.js"></script>
+    <script src="../Scripts/jquery.easyui-1.4.5.min.js"></script>
+    <script>
+        $(function () {
+
+            //建立菜单，你需要运行下列jQuery代码
+            $('#mm').menu();
+            //或者 $('#mm').menu(options);
+            //当菜单被创建时是不可见的，可使用show方法显示或者hide方法隐藏：
+            $('#mm').menu('show', {
+                left: 200,
+                top: 100
+            });
+
+        })
+    </script>
+</body>
+</html>

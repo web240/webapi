@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="../Content/themes/default/easyui.css" rel="stylesheet" />
+    <link href="../Content/themes/icon.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="dd" style="padding:5px;width:400px;height:200px;">
+        Dialog Content.
+    </div>
+
+    <script src="../Scripts/jquery-1.11.3.min.js"></script>
+    <script src="../Scripts/jquery.easyui-1.4.5.min.js"></script>
+    <script>
+        //默认对话框不能改变大小，但是用户可以设置resizeable属性为true来使它可以被改变大小
+        $('#dd').dialog({
+            title: 'My Dialog',
+            iconCls: 'icon-ok',
+            toolbar: [{
+                text: 'Add',
+                iconCls: 'icon-add',
+                handler: function () {
+                    alert('add')
+                }
+            }, '-', {
+                text: 'Save',
+                iconCls: 'icon-save',
+                handler: function () {
+                    alert('save')
+                }
+            }],
+            buttons: [{
+                text: 'Ok',
+                iconCls: 'icon-ok',
+                handler: function () {
+                    alert('ok');
+                }
+            }, {
+                text: 'Cancel',
+                handler: function () {
+                    $('#dd').dialog('close');
+                }
+            }]
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="../Content/themes/default/easyui.css" rel="stylesheet" />
+    <link href="../Content/themes/icon.css" rel="stylesheet" />
+</head>
+<body>
+    <div style="background:#fafafa;padding:10px;width:300px;height:300px;">
+        <form id="ff" method="post">
+            <div>
+                <label for="name">Name:</label>
+                <input class="easyui-validatebox" type="text" name="name" required="true"></input>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input class="easyui-validatebox" type="text" name="email" required="true" validType="email"></input>
+            </div>
+            <div>
+                <label for="subject">Subject:</label>
+                <input class="easyui-validatebox" type="text" name="subject" required="true"></input>
+            </div>
+            <div>
+                <label for="message">Message:</label>
+                <textarea name="message" style="height:60px;"></textarea>
+            </div>
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+
+    <script src="../Scripts/jquery-1.11.3.min.js"></script>
+    <script src="../Scripts/jquery.easyui-1.4.5.min.js"></script>
+    <script>
+        $('#ff').form({
+            url: '/demo7/ProcessServlet',
+            onSubmit: function () {
+                return $(this).form('validate');
+            },
+            success: function (data) {
+                alert(data);
+            }
+        });
+
+    </script>
+</body>
+</html>

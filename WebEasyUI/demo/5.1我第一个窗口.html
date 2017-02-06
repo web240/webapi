@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="../Content/themes/default/easyui.css" rel="stylesheet" />
+    <link href="../Content/themes/icon.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="win" class="easyui-window" title="My Window" style="width:300px;height:100px;padding:5px;">
+        Some Content.
+    </div>
+
+    <div id="win1" class="easyui-window" title="My Window" closed="true" style="width:300px;height:100px;padding:5px;">
+        Some Content.
+    </div>
+
+    <div id="win2" class="easyui-window" title="Login" style="width:300px;height:180px;">
+        <form style="padding:10px 20px 10px 40px;">
+            <p>Name: <input type="text"></p>
+            <p>Pass: <input type="password"></p>
+            <div style="padding:5px;text-align:center;">
+                <a href="#" class="easyui-linkbutton" icon="icon-ok">Ok</a>
+                <a href="#" class="easyui-linkbutton" icon="icon-cancel">Cancel</a>
+            </div>
+        </form>
+    </div>
+
+
+    <script src="../Scripts/jquery-1.11.3.min.js"></script>
+    <script src="../Scripts/jquery.easyui-1.4.5.min.js"></script>
+    <script>
+        
+        $('#win1').window('open');
+
+    </script>
+</body>
+</html>

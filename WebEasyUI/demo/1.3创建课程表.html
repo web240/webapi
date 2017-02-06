@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>1.3创建课程表</title>
+	<meta charset="utf-8" />
+    <link href="../Content/themes/default/easyui.css" rel="stylesheet" />
+    <link href="../Content/themes/icon.css" rel="stylesheet" />
+</head>
+<body>
+    <!--显示课程-->
+    <div class="left">
+        <table>
+            <tr>
+                <td><div class="item">English</div></td>
+            </tr>
+            <tr>
+                <td><div class="item">Science</div></td>
+            </tr>
+            <!-- other subjects -->
+        </table>
+    </div>
+
+    <!--显示时间表-->
+    <div class="right">
+        <table>
+            <tr>
+                <td class="blank"></td>
+                <td class="title">Monday</td>
+                <td class="title">Tuesday</td>
+                <td class="title">Wednesday</td>
+                <td class="title">Thursday</td>
+                <td class="title">Friday</td>
+            </tr>
+            <tr>
+                <td class="time">08:00</td>
+                <td class="drop"></td>
+                <td class="drop"></td>
+                <td class="drop"></td>
+                <td class="drop"></td>
+                <td class="drop"></td>
+            </tr>
+            <tr>
+                <td class="time">09:00</td>
+                <td class="drop"></td>
+                <td class="drop"></td>
+                <td class="drop"></td>
+                <td class="drop"></td>
+                <td class="drop"></td>
+            </tr>
+            <!-- other cells -->
+        </table>
+    </div>
+
+
+    <script src="../Scripts/jquery-1.11.3.min.js"></script>
+    <script src="../Scripts/jquery.easyui-1.4.5.min.js"></script>
+    <script>
+        $(function () {
+
+            //拖动左面的课程
+            $('.left .item').draggable({
+                revert: true,
+                proxy: 'clone'
+            });
+
+            //放置课程到时间表中
+            $('.right td.drop').droppable({
+                onDragEnter: function () {
+                    $(this).addClass('over');
+                },
+                onDragLeave: function () {
+                    $(this).removeClass('over');
+                },
+                onDrop: function (e, source) {
+                    $(this).removeClass('over');
+                    if ($(source).hasClass('assigned')) {
+                        $(this).append(source);
+                    } else {
+                        var c = $(source).clone().addClass('assigned');
+                        $(this).empty().append(c);
+                        c.draggable({
+                            revert: true
+                        });
+                    }
+                }
+            });
+
+        })
+    </script>
+</body>
+</html>

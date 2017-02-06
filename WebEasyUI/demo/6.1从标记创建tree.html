@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="../Content/themes/default/easyui.css" rel="stylesheet" />
+    <link href="../Content/themes/icon.css" rel="stylesheet" />
+</head>
+<body>
+    <ul id="tt">
+        <li>
+            <span>Folder</span>
+            <ul>
+                <li>
+                    <span>Sub Folder 1</span>
+                    <ul>
+                        <li><span>File 11</span></li>
+                        <li><span>File 12</span></li>
+                        <li><span>File 13</span></li>
+                    </ul>
+                </li>
+                <li><span>File 2</span></li>
+                <li><span>File 3</span></li>
+            </ul>
+        </li>
+        <li><span>File21</span></li>
+    </ul>
+
+    <script src="../Scripts/jquery-1.11.3.min.js"></script>
+    <script src="../Scripts/jquery.easyui-1.4.5.min.js"></script>
+    <script>
+        $('#tt').tree();
+    </script>
+</body>
+</html>

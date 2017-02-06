@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="../Content/themes/default/easyui.css" rel="stylesheet" />
+    <link href="../Content/themes/icon.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="dlg" style="padding:20px;">
+        <h2>Account Information</h2>
+        <form id="ff" action="/demo6/ProcessServlet" method="post">
+            <table>
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" name="name" /></td>
+                </tr>
+                <tr>
+                    <td>Address:</td>
+                    <td><input type="text" name="address" /></td>
+                </tr>
+                <tr>
+                    <td>City:</td>
+                    <td><select class="easyui-combotree" url="city_data.json" name="city" style="width:155px;" /></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <script src="../Scripts/jquery-1.11.3.min.js"></script>
+    <script src="../Scripts/jquery.easyui-1.4.5.min.js"></script>
+    <script>
+        $('#dlg').dialog({
+            title: 'Register',
+            width: 310,
+            height: 250,
+            buttons: [{
+                text: 'Submit',
+                iconCls: 'icon-ok',
+                handler: function () {
+                    $('#ff').form('submit', {
+                        success: function (data) {
+                            $.messager.alert('Info', data, 'info');
+                        }
+                    });
+                }
+            }, {
+                text: 'Cancel',
+                iconCls: 'icon-cancel',
+                handler: function () {
+                    $('#dlg').dialog('close');
+                }
+            }]
+        });
+
+    </script>
+</body>
+</html>

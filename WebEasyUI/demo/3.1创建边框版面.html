@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>3.1创建边框版面</title>
+    <meta charset="utf-8" />
+    <link href="../Content/themes/default/easyui.css" rel="stylesheet" />
+    <link href="../Content/themes/icon.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="easyui-layout" style="width:400px;height:300px;">
+        <div region="west" split="true" title="Navigator" style="width:150px;">
+            <p style="padding:5px;margin:0;">Select language:</p>
+            <ul>
+                <li><a href="javascript:void(0)" onclick="showpage('java.html')">Java</a></li>
+                <li><a href="javascript:void(0)" onclick="showpage('cshape.html')">C#</a></li>
+                <li><a href="javascript:void(0)" onclick="showpage('vb.html')">VB</a></li>
+                <li><a href="javascript:void(0)" onclick="showpage('erlang.html')">Erlang</a></li>
+            </ul>
+        </div>
+        <div id="content" region="center" title="Language" href="java.html" style="padding:5px;">
+        </div>
+    </div>
+
+    <script src="../Scripts/jquery-1.11.3.min.js"></script>
+    <script src="../Scripts/jquery.easyui-1.4.5.min.js"></script>
+    <script>
+
+        function showpage(url) {
+            $('#content').load(url);
+        }
+
+    </script>
+</body>
+</html>

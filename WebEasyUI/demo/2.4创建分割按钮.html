@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>2.4创建分割按钮</title>
+    <meta charset="utf-8" />
+    <link href="../Content/themes/default/easyui.css" rel="stylesheet" />
+    <link href="../Content/themes/icon.css" rel="stylesheet" />
+</head>
+<body>
+    <div style="border:1px solid #ccc;background:#ddd;padding:5px;width:120px;">
+        <a href="javascript:void(0)" id="sb" icon="icon-edit">Edit</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" plain="true" icon="icon-help"></a>
+    </div>
+    <div id="mm" style="width:150px;">
+        <div icon="icon-undo">Undo</div>
+        <div icon="icon-redo">Redo</div>
+        <div class="menu-sep"></div>
+        <div>Cut</div>
+        <div>Copy</div>
+        <div>Paste</div>
+        <div class="menu-sep"></div>
+        <div>
+            <span>Open</span>
+            <div style="width:150px;">
+                <div>Firefox</div>
+                <div>Internet Explorer</div>
+                <div class="menu-sep"></div>
+                <div>Select Program...</div>
+            </div>
+        </div>
+        <div icon="icon-remove">Delete</div>
+        <div>Select All</div>
+    </div>
+
+    <script src="../Scripts/jquery-1.11.3.min.js"></script>
+    <script src="../Scripts/jquery.easyui-1.4.5.min.js"></script>
+    <script>
+        $(function () {
+            $('#sb').splitbutton({ menu: '#mm' });
+        })
+    </script>
+</body>
+</html>
