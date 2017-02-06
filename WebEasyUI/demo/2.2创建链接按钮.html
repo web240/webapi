@@ -21,7 +21,7 @@
     <div style="padding:5px;background:#efefef;width:500px;">
         <a href="#" class="easyui-linkbutton" plain="true" icon="icon-cancel">Cancel</a>
         <a href="#" class="easyui-linkbutton" plain="true" icon="icon-reload">Refresh</a>
-        <a href="#" class="easyui-linkbutton" plain="true" icon="icon-search">Query</a>
+        <a href="#" class="easyui-linkbutton" plain="true" icon="icon-search" id="query">Query</a>
         <a href="#" class="easyui-linkbutton" plain="true">text button</a>
         <a href="#" class="easyui-linkbutton" plain="true" icon="icon-print">Print</a>
         <a href="#" class="easyui-linkbutton" plain="true" icon="icon-help">&nbsp;</a>
@@ -34,7 +34,7 @@
     <script>
         $(function () {
             //禁用按钮
-            $(selector).linkbutton({ disabled: true });
+            $("#query").linkbutton({ disabled: true });
         })
     </script>
 </body>

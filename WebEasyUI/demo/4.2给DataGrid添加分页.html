@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title></title>
+    <title>4.2给DataGrid添加分页</title>
     <meta charset="utf-8" />
     <link href="../Content/themes/default/easyui.css" rel="stylesheet" />
     <link href="../Content/themes/icon.css" rel="stylesheet" />
@@ -17,7 +17,8 @@
             iconCls: 'icon-save',
             width: 600,
             height: 250,
-            url: '/demo3/data/getItems',
+            url: 'datagrid_data.json',
+            method:'GET',
             columns: [[
                 { field: 'itemid', title: 'Item ID', width: 80 },
                 { field: 'productid', title: 'Product ID', width: 80 },

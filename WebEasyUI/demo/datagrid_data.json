@@ -1,3 +1,100 @@
 ﻿{
-
+  "products": [
+    {
+      "itemid": 1,
+      "productid": "p1",
+      "listprice": 2.0,
+      "unitcost": 20,
+      "attr1": "other",
+      "status": false
+    },
+    {
+      "itemid": 2,
+      "productid": "p2",
+      "listprice": 25.0,
+      "unitcost": 20,
+      "attr1": "other",
+      "status": false
+    },
+    {
+      "itemid": 3,
+      "productid": "p3",
+      "listprice": 15.0,
+      "unitcost": 20,
+      "attr1": "other",
+      "status": false
+    },
+    {
+      "itemid": 1,
+      "productid": "p1",
+      "listprice": 25.0,
+      "unitcost": 20,
+      "attr1": "other",
+      "status": false
+    },
+    {
+      "itemid": 2,
+      "productid": "p2",
+      "listprice": 25.0,
+      "unitcost": 20,
+      "attr1": "other",
+      "status": false
+    },
+    {
+      "itemid": 3,
+      "productid": "p3",
+      "listprice": 35.0,
+      "unitcost": 20,
+      "attr1": "other",
+      "status": false
+    },
+    {
+      "itemid": 1,
+      "productid": "p1",
+      "listprice": 25.0,
+      "unitcost": 20,
+      "attr1": "other",
+      "status": false
+    },
+    {
+      "itemid": 2,
+      "productid": "p2",
+      "listprice": 25.0,
+      "unitcost": 20,
+      "attr1": "other",
+      "status": false
+    },
+    {
+      "itemid": 3,
+      "productid": "p3",
+      "listprice": 25.0,
+      "unitcost": 20,
+      "attr1": "other",
+      "status": false
+    },
+    {
+      "itemid": 1,
+      "productid": "p1",
+      "listprice": 25.0,
+      "unitcost": 20,
+      "attr1": "other",
+      "status": false
+    },
+    {
+      "itemid": 2,
+      "productid": "p2",
+      "listprice": 25.0,
+      "unitcost": 20,
+      "attr1": "other",
+      "status": false
+    },
+    {
+      "itemid": 3,
+      "productid": "p3",
+      "listprice": 25.0,
+      "unitcost": 20,
+      "attr1": "other",
+      "status": false
+    }
+  ]
 }
