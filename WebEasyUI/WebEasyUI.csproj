@@ -43,34 +43,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.1.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.1.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.1.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.AI.Web, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.1.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.AI.WindowsServer, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.1.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.ApplicationInsights, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.2.1.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -92,58 +64,6 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="demo\1.3创建课程表.html" />
-    <Content Include="demo\2.1创建简单菜单.html" />
-    <Content Include="demo\2.2创建链接按钮.html" />
-    <Content Include="demo\2.3创建菜单按钮.html" />
-    <Content Include="demo\2.4创建分割按钮.html" />
-    <Content Include="demo\3.1创建边框版面.html" />
-    <Content Include="demo\3.2面板上的复合面版.html" />
-    <Content Include="demo\3.3建立可折叠面板.html" />
-    <Content Include="demo\3.4建立Tabs.html" />
-    <Content Include="demo\3.5动态添加Tabs.html" />
-    <Content Include="demo\3.6建立XP样式左面板.html" />
-    <Content Include="demo\4.10 在DataGrid中选择复选框.html" />
-    <Content Include="demo\4.11 定制DataGrid页面.html" />
-    <Content Include="demo\4.12使DataGrid能编辑.html" />
-    <Content Include="demo\4.13合并DataGrid单元格.html" />
-    <Content Include="demo\4.1转换HTML表格到DataGrid.html" />
-    <Content Include="demo\4.2给DataGrid添加分页.html" />
-    <Content Include="demo\4.3 从DataGrid中获得选定行的数据.html" />
-    <Content Include="demo\4.4添加工具栏到DataGrid.html" />
-    <Content Include="demo\4.5DataGrid冻结列.html" />
-    <Content Include="demo\4.6动态改变DataGrid列.html" />
-    <Content Include="demo\4.7格式化DataGrid列.html" />
-    <Content Include="demo\4.8 添加DataGrid的分类.html" />
-    <Content Include="demo\4.9 在DataGrid中建立列组.html" />
-    <Content Include="demo\5.1我第一个窗口.html" />
-    <Content Include="demo\5.2自定义窗口工具.html" />
-    <Content Include="demo\5.3窗口和版面.html" />
-    <Content Include="demo\5.4创建对话框.html" />
-    <Content Include="demo\0.base.html" />
-    <Content Include="demo\6.1从标记创建tree.html" />
-    <Content Include="demo\6.2创建异步tree.html" />
-    <Content Include="demo\6.3添加tree节点.html" />
-    <Content Include="demo\6.4创建checkbox节点的tree.html" />
-    <Content Include="demo\7.1Ajax方式发送表单.html" />
-    <Content Include="demo\7.2添加复合tree到表单.html" />
-    <Content Include="demo\7.3表单检验.html" />
-    <Content Include="packages.config" />
-    <Content Include="ApplicationInsights.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Scripts\jquery-1.11.3.min.map" />
-    <Content Include="demo\datagrid_data.json" />
-    <Content Include="Scripts\jquery-easyui-1.5.1\themes\material\images\Thumbs.db" />
-    <Content Include="demo\tree_data.json" />
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\themes\black\accordion.css" />
@@ -406,10 +326,6 @@
     <Content Include="Content\themes\material\images\slider_handle.png" />
     <Content Include="Content\themes\material\images\spinner_arrows.png" />
     <Content Include="Content\themes\material\images\tabs_icons.png" />
-    <Content Include="Content\themes\material\images\Thumbs.db" />
-    <Content Include="demo\1.1基本拖放.html" />
-    <Content Include="demo\1.2购物车型拖放.html" />
-    <None Include="Scripts\jquery-1.11.3.intellisense.js" />
     <Content Include="Content\themes\material\images\tree_icons.png" />
     <Content Include="Content\themes\material\images\validatebox_warning.png" />
     <Content Include="Content\themes\material\layout.css" />
@@ -484,9 +400,62 @@
     <Content Include="Content\themes\metro\validatebox.css" />
     <Content Include="Content\themes\metro\window.css" />
     <Content Include="Content\themes\mobile.css" />
+    <Content Include="demo\1.3创建课程表.html" />
+    <Content Include="demo\2.1创建简单菜单.html" />
+    <Content Include="demo\2.2创建链接按钮.html" />
+    <Content Include="demo\2.3创建菜单按钮.html" />
+    <Content Include="demo\2.4创建分割按钮.html" />
+    <Content Include="demo\3.1创建边框版面.html" />
+    <Content Include="demo\3.2面板上的复合面版.html" />
+    <Content Include="demo\3.3建立可折叠面板.html" />
+    <Content Include="demo\3.4建立Tabs.html" />
+    <Content Include="demo\3.5动态添加Tabs.html" />
+    <Content Include="demo\3.6建立XP样式左面板.html" />
+    <Content Include="demo\4.10 在DataGrid中选择复选框.html" />
+    <Content Include="demo\4.11 定制DataGrid页面.html" />
+    <Content Include="demo\4.12使DataGrid能编辑.html" />
+    <Content Include="demo\4.13合并DataGrid单元格.html" />
+    <Content Include="demo\4.1转换HTML表格到DataGrid.html" />
+    <Content Include="demo\4.2给DataGrid添加分页.html" />
+    <Content Include="demo\4.3 从DataGrid中获得选定行的数据.html" />
+    <Content Include="demo\4.4添加工具栏到DataGrid.html" />
+    <Content Include="demo\4.5DataGrid冻结列.html" />
+    <Content Include="demo\4.6动态改变DataGrid列.html" />
+    <Content Include="demo\4.7格式化DataGrid列.html" />
+    <Content Include="demo\4.8 添加DataGrid的分类.html" />
+    <Content Include="demo\4.9 在DataGrid中建立列组.html" />
+    <Content Include="demo\5.1我第一个窗口.html" />
+    <Content Include="demo\5.2自定义窗口工具.html" />
+    <Content Include="demo\5.3窗口和版面.html" />
+    <Content Include="demo\5.4创建对话框.html" />
+    <Content Include="demo\0.base.html" />
+    <Content Include="demo\6.1从标记创建tree.html" />
+    <Content Include="demo\6.2创建异步tree.html" />
+    <Content Include="demo\6.3添加tree节点.html" />
+    <Content Include="demo\6.4创建checkbox节点的tree.html" />
+    <Content Include="demo\7.1Ajax方式发送表单.html" />
+    <Content Include="demo\7.2添加复合tree到表单.html" />
+    <Content Include="demo\7.3表单检验.html" />
+    <Content Include="packages.config" />
+    <Content Include="Scripts\easyloader.js" />
+    <Content Include="Scripts\jquery-1.11.3.min.map" />
+    <Content Include="demo\datagrid_data.json" />
+    <Content Include="Scripts\jquery-easyui-1.5.1\themes\material\images\Thumbs.db" />
+    <Content Include="demo\tree_data.json" />
+    <Content Include="Content\themes\material\images\Thumbs.db" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="demo\1.1基本拖放.html" />
+    <Content Include="demo\1.2购物车型拖放.html" />
+    <None Include="Scripts\jquery-1.11.3.intellisense.js" />
     <Content Include="demo\images\img.gif" />
     <Content Include="index.html" />
-    <Content Include="Scripts\easyloader.js" />
     <Content Include="Scripts\jquery-1.11.3.js" />
     <Content Include="Scripts\jquery-1.11.3.min.js" />
     <Content Include="Scripts\jquery-easyui-1.5.1\changelog.txt" />

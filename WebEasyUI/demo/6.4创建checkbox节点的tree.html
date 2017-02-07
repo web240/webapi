@@ -10,15 +10,15 @@
 <body>
     <ul id="tt"></ul>
     <script src="../Scripts/jquery-1.11.3.min.js"></script>
-    <script src="../Scripts/jquery.easyui-1.4.5.min.js"></script>
+    <script src="../Scripts/easyloader.js"></script>
     <script>
-        using('tree', function () {
-            $('#tt').tree({
-                url: 'tree_data.json',
-                checkbox: true
+            using('tree', function () {
+                $('#tt').tree({
+                    url: 'tree_data.json',
+                    method: 'get',
+                    checkbox: true
+                });
             });
-        });
-
     </script>
 </body>
 </html>
