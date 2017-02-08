@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAll", "WebAll\WebAll.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebBackbone", "WebBackbone\WebBackbone.csproj", "{DD69F292-381C-4E88-BF6D-4F89F309F60F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebGroupflyTest", "WebGroupflyTest\WebGroupflyTest.csproj", "{3FB30F39-B3D4-46D3-B05B-0A644582C4E4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,8 +65,15 @@ Global
 		{DD69F292-381C-4E88-BF6D-4F89F309F60F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD69F292-381C-4E88-BF6D-4F89F309F60F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD69F292-381C-4E88-BF6D-4F89F309F60F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FB30F39-B3D4-46D3-B05B-0A644582C4E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FB30F39-B3D4-46D3-B05B-0A644582C4E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FB30F39-B3D4-46D3-B05B-0A644582C4E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FB30F39-B3D4-46D3-B05B-0A644582C4E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45
 	EndGlobalSection
 EndGlobal
