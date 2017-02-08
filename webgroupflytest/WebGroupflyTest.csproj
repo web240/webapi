@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -25,6 +26,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>2.1</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -253,6 +255,11 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="TypescriptDemo\01.basic.html" />
+    <Content Include="TypescriptDemo\01.basic.js" />
+    <Content Include="TypescriptDemo\gitbook_readme.md" />
+    <Content Include="TypescriptDemo\interpretation\dest\content.html" />
+    <Content Include="TypescriptDemo\SUMMARY.md" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -287,9 +294,68 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="TypescriptDemo\01.basic.js.map" />
+    <Content Include="TypescriptDemo\gitbook\basic_types.md" />
+    <Content Include="TypescriptDemo\gitbook\classes.md" />
+    <Content Include="TypescriptDemo\gitbook\common_errors.md" />
+    <Content Include="TypescriptDemo\gitbook\declaration_merging.md" />
+    <Content Include="TypescriptDemo\gitbook\functions.md" />
+    <Content Include="TypescriptDemo\gitbook\generics.md" />
+    <Content Include="TypescriptDemo\gitbook\interfaces.md" />
+    <Content Include="TypescriptDemo\gitbook\mixins.md" />
+    <Content Include="TypescriptDemo\gitbook\modules.md" />
+    <Content Include="TypescriptDemo\gitbook\typescript_1.5.md" />
+    <Content Include="TypescriptDemo\gitbook\type_compatibility.md" />
+    <Content Include="TypescriptDemo\gitbook\type_inference.md" />
+    <Content Include="TypescriptDemo\gitbook\writing_.d.ts_files.md" />
+    <Content Include="TypescriptDemo\interpretation\basic_types.md" />
+    <Content Include="TypescriptDemo\interpretation\classes.md" />
+    <Content Include="TypescriptDemo\interpretation\common_errors.md" />
+    <Content Include="TypescriptDemo\interpretation\declaration_merging.md" />
+    <Content Include="TypescriptDemo\interpretation\functions.md" />
+    <Content Include="TypescriptDemo\interpretation\generics.md" />
+    <Content Include="TypescriptDemo\interpretation\interfaces.md" />
+    <Content Include="TypescriptDemo\interpretation\mixins.md" />
+    <Content Include="TypescriptDemo\interpretation\modules.md" />
+    <Content Include="TypescriptDemo\interpretation\typescript_1.5.md" />
+    <Content Include="TypescriptDemo\interpretation\type_compatibility.md" />
+    <Content Include="TypescriptDemo\interpretation\type_inference.md" />
+    <Content Include="TypescriptDemo\interpretation\writing_.d.ts_files.md" />
+    <Content Include="TypescriptDemo\TypeScript.pdf" />
+    <Content Include="TypescriptDemo\handbook\Advanced Types.md" />
+    <Content Include="TypescriptDemo\handbook\Basic Types.md" />
+    <Content Include="TypescriptDemo\handbook\Classes.md" />
+    <Content Include="TypescriptDemo\handbook\Compiler Options in MSBuild.md" />
+    <Content Include="TypescriptDemo\handbook\Compiler Options.md" />
+    <Content Include="TypescriptDemo\handbook\Declaration Merging.md" />
+    <Content Include="TypescriptDemo\handbook\Decorators.md" />
+    <Content Include="TypescriptDemo\handbook\Enums.md" />
+    <Content Include="TypescriptDemo\handbook\Functions.md" />
+    <Content Include="TypescriptDemo\handbook\Generics.md" />
+    <Content Include="TypescriptDemo\handbook\Integrating with Build Tools.md" />
+    <Content Include="TypescriptDemo\handbook\Interfaces.md" />
+    <Content Include="TypescriptDemo\handbook\Iterators and Generators.md" />
+    <Content Include="TypescriptDemo\handbook\JSX.md" />
+    <Content Include="TypescriptDemo\handbook\Mixins.md" />
+    <Content Include="TypescriptDemo\handbook\Module Resolution.md" />
+    <Content Include="TypescriptDemo\handbook\Modules.md" />
+    <Content Include="TypescriptDemo\handbook\Namespaces and Modules.md" />
+    <Content Include="TypescriptDemo\handbook\Namespaces.md" />
+    <Content Include="TypescriptDemo\handbook\Nightly Builds.md" />
+    <Content Include="TypescriptDemo\handbook\Symbols.md" />
+    <Content Include="TypescriptDemo\handbook\Triple-Slash Directives.md" />
+    <Content Include="TypescriptDemo\handbook\tsconfig.json.md" />
+    <Content Include="TypescriptDemo\handbook\Type Compatibility.md" />
+    <Content Include="TypescriptDemo\handbook\Type Inference.md" />
+    <Content Include="TypescriptDemo\handbook\Typings for NPM Packages.md" />
+    <Content Include="TypescriptDemo\handbook\Variable Declarations.md" />
+    <Content Include="TypescriptDemo\handbook\Writing Declaration Files.md" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="TypescriptDemo\handbook\declaration files\" />
+    <Folder Include="TypescriptDemo\handbook\release notes\" />
+    <Folder Include="TypescriptDemo\handbook\tutorials\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -299,11 +365,32 @@
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="TypescriptDemo\01.basic.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="TypescriptDemo\02.interface.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="TypescriptDemo\03.class.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="TypescriptDemo\04.block.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="TypescriptDemo\05.function.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
