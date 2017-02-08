@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>4.8添加排序到DataGrid</title>
+    <meta charset="utf-8" />
+    <link href="../Content/themes/default/easyui.css" rel="stylesheet" />
+    <link href="../Content/themes/icon.css" rel="stylesheet" />
+</head>
+<body>
+    <table id="tt"></table>
+    <script src="../Scripts/jquery-1.11.3.min.js"></script>
+    <script src="../Scripts/jquery.easyui-1.4.5.min.js"></script>
+    <script>
+        $('#tt').datagrid({
+            title: 'Sortable Column',
+            width: 550,
+            height: 250,
+            url: 'datagrid_data.json',
+            method:'get',
+            columns: [[
+                { field: 'itemid', title: 'Item ID', width: 80, sortable: true },
+                { field: 'productid', title: 'Product ID', width: 80, sortable: true },
+                { field: 'listprice', title: 'List Price', width: 80, align: 'right', sortable: true },
+                { field: 'unitcost', title: 'Unit Cost', width: 80, align: 'right', sortable: true },
+                { field: 'attr1', title: 'Attribute', width: 100 },
+                { field: 'status', title: 'Status', width: 60 }
+            ]],
+            pagination: true,
+            sortName: 'itemid',
+            sortOrder: 'asc',
+            remoteSort:false,
+        multiSort:true
+        });
+
+    </script>
+</body>
+</html>

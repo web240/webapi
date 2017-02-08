@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>4.3从DataGrid中获得选定行的数据</title>
+    <meta charset="utf-8" />
+    <link href="../Content/themes/default/easyui.css" rel="stylesheet" />
+    <link href="../Content/themes/icon.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <a href="#" class="easyui-linkbutton" onclick="getSelected()">getSelected</a>
+        <a href="#" class="easyui-linkbutton" onclick="getSelections()">getSelections</a>
+    </div>
+    <table id="tt"></table>
+    <script src="../Scripts/jquery-1.11.3.min.js"></script>
+    <script src="../Scripts/jquery.easyui-1.4.5.min.js"></script>
+    <script>
+        $('#tt').datagrid({
+            title: 'Load Data',
+            iconCls: 'icon-save',
+            width: 600,
+            height: 250,
+            url: 'datagrid_data.json',
+            method:'get',
+            columns: [[
+                { field: 'itemid', title: 'Item ID', width: 80 },
+                { field: 'productid', title: 'Product ID', width: 80 },
+                { field: 'listprice', title: 'List Price', width: 80, align: 'right' },
+                { field: 'unitcost', title: 'Unit Cost', width: 80, align: 'right' },
+                { field: 'attr1', title: 'Attribute', width: 100 },
+                { field: 'status', title: 'Status', width: 60 }
+            ]]
+        });
+
+        //得到选中行
+        function getSelected() {
+            var row = $('#tt').datagrid('getSelected');
+            if (row) {
+                $.messager.alert('selected item','Item ID:' + row.itemid + "\nPrice:" + row.listprice);
+            }
+        }
+
+        //得到全部行
+        function getSelections() {
+            var ids = [];
+            var rows = $('#tt').datagrid('getSelections');
+            for (var i = 0; i < rows.length; i++) {
+                ids.push(rows[i].itemid);
+            }
+            alert(ids.join('\n'));
+        }
+
+    </script>
+</body>
+</html>

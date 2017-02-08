@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>4.11自定义DataGrid分页</title>
+    <meta charset="utf-8" />
+    <link href="../Content/themes/default/easyui.css" rel="stylesheet" />
+    <link href="../Content/themes/icon.css" rel="stylesheet" />
+</head>
+<body>
+    <table id="tt"></table>
+    <script src="../Scripts/jquery-1.11.3.min.js"></script>
+    <script src="../Scripts/jquery.easyui-1.4.5.min.js"></script>
+    <script>
+        $('#tt').datagrid({
+            title: 'Load Data',
+            iconCls: 'icon-save',
+            width: 550,
+            height: 250,
+            pagination: true,
+            url: 'datagrid_data.json',
+            method:'get',
+            columns: [[
+                { field: 'itemid', title: 'Item ID', width: 80 },
+                { field: 'productid', title: 'Product ID', width: 80 },
+                { field: 'listprice', title: 'List Price', width: 80, align: 'right' },
+                { field: 'unitcost', title: 'Unit Cost', width: 80, align: 'right' },
+                { field: 'attr1', title: 'Attribute', width: 100 },
+                { field: 'status', title: 'Status', width: 60 }
+            ]]
+        });
+
+        var pager = $('#tt').datagrid('getPager');    //得到DataGrid页面
+        pager.pagination({
+            showPageList: false,
+            buttons: [{
+                iconCls: 'icon-search',
+                handler: function () {
+                    alert('search');
+                }
+            }, {
+                iconCls: 'icon-add',
+                handler: function () {
+                    alert('add');
+                }
+            }, {
+                iconCls: 'icon-edit',
+                handler: function () {
+                    alert('edit');
+                }
+            }],
+            onBeforeRefresh: function () {
+                alert('before refresh');
+                return true;
+            }
+        });
+
+    </script>
+</body>
+</html>
