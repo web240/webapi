@@ -108,7 +108,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="demo\" />
-    <Folder Include="document\" />
+    <Folder Include="document\BackBone中文注释\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

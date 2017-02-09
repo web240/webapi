@@ -1,3 +1,5 @@
+/// <reference path="../scripts/typings/jquery/jquery.d.ts" />
+//declare var jQuery: (string) => any;
 //1.声明一个booolean类型默认值是false
 var isFlag = false;
 //2.声明一个number类型值
