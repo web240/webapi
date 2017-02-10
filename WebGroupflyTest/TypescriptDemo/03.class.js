@@ -141,3 +141,4 @@ var greeterMaker = Greeter;
 greeterMaker.standardGreeting = "Hey there!";
 var greeter2 = new greeterMaker();
 console.log(greeter2.greet());
+//# sourceMappingURL=03.class.js.map

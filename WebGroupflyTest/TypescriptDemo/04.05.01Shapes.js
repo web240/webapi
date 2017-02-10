@@ -31,3 +31,4 @@ var Shapes;
         Polygons.Square = Square;
     })(Polygons = Shapes.Polygons || (Shapes.Polygons = {}));
 })(Shapes || (Shapes = {}));
+//# sourceMappingURL=04.05.01Shapes.js.map

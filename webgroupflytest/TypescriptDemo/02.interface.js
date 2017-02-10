@@ -76,3 +76,4 @@ var c;
 c(10);
 c.interval = 5.0;
 c.reset();
+//# sourceMappingURL=02.interface.js.map

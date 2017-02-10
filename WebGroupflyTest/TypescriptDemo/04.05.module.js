@@ -8,3 +8,4 @@ $(function () {
     $("#msg1").html("<span style='color:red'>" + triangleArea + "</span>");
     $("#msq2").html("<span style='color:red'>" + squareArea + "</sapn>");
 });
+//# sourceMappingURL=04.05.module.js.map

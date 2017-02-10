@@ -103,3 +103,4 @@ $(document).ready(function () {
     setTableRowColor();
     //setTableRowColor1();
 });
+//# sourceMappingURL=01.basic.js.map

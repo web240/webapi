@@ -261,6 +261,8 @@
     <Content Include="TypescriptDemo\03.class.html" />
     <Content Include="TypescriptDemo\04.01.module.html" />
     <Content Include="TypescriptDemo\04.02.module.html" />
+    <Content Include="TypescriptDemo\05.function.html" />
+    <Content Include="TypescriptDemo\06.generic.html" />
     <Content Include="TypescriptDemo\gitbook_readme.md" />
     <Content Include="TypescriptDemo\interpretation\dest\content.html" />
     <Content Include="TypescriptDemo\SUMMARY.md" />
@@ -406,6 +408,10 @@
     <TypeScriptCompile Include="TypescriptDemo\05.function.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="TypescriptDemo\06.generics.ts" />
+    <TypeScriptCompile Include="TypescriptDemo\07.mixins.ts" />
+    <TypeScriptCompile Include="TypescriptDemo\08.declaration_mergin.ts" />
+    <TypeScriptCompile Include="TypescriptDemo\09.type_compatibility.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
