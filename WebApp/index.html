@@ -1,11 +1,46 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-	<meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>主页</title>
+    <meta charset="utf-8" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
 </head>
 <body>
+    <div>
+        <div><label>province:</label><input data-bind="value:province" /></div>
+        <div><label>city:</label><input data-bind="value:city" /></div>
+        <div><label>district:</label><input data-bind="value:district" /></div>
+        <div><label>street:</label><input data-bind="value:street" /></div>
+        <div><label>address:</label><input data-bind="value:address" /></div>
+        <div><input type="button" data-bind="click:format" value="submit" /></div>
+    </div>
+    <script src="Scripts/jquery-1.11.3.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/knockout-3.4.1.js"></script>
+    <script src="Scripts/viewmodel.js"></script>
+    <script>
+        function AddressModel() {
+            var self = this;
+            self.province = ko.observable("hubei");
+            self.city = ko.observable("wuhan");
+            self.district = ko.observable("hongshan");
+            self.street = ko.observable("dayehuayuan 3-1-403");
+            self.address = ko.observable();
 
+            self.format = function () {
+                if (self.province() && self.city() && self.district() && self.street()) {
+                    var address = self.province() + " " + self.city() + " " + self.street();
+                    self.address(address);
+                } else {
+                    alert("please full address imformation");
+                }
+            };
+
+            self.format();
+        }
+
+        ko.applyBindings(new AddressModel());
+    </script>
 </body>
 </html>
