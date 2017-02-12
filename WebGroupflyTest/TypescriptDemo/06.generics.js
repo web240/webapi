@@ -102,7 +102,7 @@ var Animals = (function () {
 var Bee = (function (_super) {
     __extends(Bee, _super);
     function Bee() {
-        return _super.apply(this, arguments) || this;
+        return _super !== null && _super.apply(this, arguments) || this;
     }
     return Bee;
 }(Animals));
@@ -110,7 +110,7 @@ var Bee = (function (_super) {
 var Lion = (function (_super) {
     __extends(Lion, _super);
     function Lion() {
-        return _super.apply(this, arguments) || this;
+        return _super !== null && _super.apply(this, arguments) || this;
     }
     return Lion;
 }(Animals));
