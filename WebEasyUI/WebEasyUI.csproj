@@ -436,6 +436,8 @@
     <Content Include="demo\7.1Ajax方式发送表单.html" />
     <Content Include="demo\7.2添加复合tree到表单.html" />
     <Content Include="demo\7.3表单检验.html" />
+    <Content Include="iscoll\index.html" />
+    <Content Include="mobiscoll\index.html" />
     <Content Include="packages.config" />
     <Content Include="Scripts\easyloader.js" />
     <Content Include="Scripts\jquery-1.11.3.min.map" />
@@ -1192,12 +1194,17 @@
     <Content Include="Scripts\jquery-easyui-1.4.5\demo\tree\tree_data2.json" />
     <Content Include="Scripts\jquery-easyui-1.4.5\themes\material\images\Thumbs.db" />
     <Content Include="demo\products.json" />
+    <Content Include="zeptotime\demo.html" />
+    <Content Include="zeptotime\zepto.js" />
+    <Content Include="zeptotime\zepto.mdatetimer.css" />
+    <Content Include="zeptotime\zepto.mdatetimer.js" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="zeptotime\readme.md" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="demo\1.1基本拖放.html" />
@@ -2078,7 +2085,12 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="iscoll\css\" />
+    <Folder Include="iscoll\js\" />
+    <Folder Include="mobiscoll\css\" />
+    <Folder Include="mobiscoll\js\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
