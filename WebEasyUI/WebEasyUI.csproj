@@ -66,6 +66,12 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\themes\black\accordion.css" />
     <Content Include="Content\themes\black\calendar.css" />
     <Content Include="Content\themes\black\combo.css" />
@@ -400,6 +406,28 @@
     <Content Include="Content\themes\metro\validatebox.css" />
     <Content Include="Content\themes\metro\window.css" />
     <Content Include="Content\themes\mobile.css" />
+    <Content Include="demoTimePicker\iscoll\css\common.css" />
+    <Content Include="demoTimePicker\iscoll\index.html" />
+    <Content Include="demoTimePicker\iscoll\js\date.js" />
+    <Content Include="demoTimePicker\iscoll\js\date1.js" />
+    <Content Include="demoTimePicker\iscoll\js\iscroll.js" />
+    <Content Include="demoTimePicker\iscoll\js\jquery-1.9.1.js" />
+    <Content Include="demoTimePicker\mobiscoll\css\mobiscroll.css" />
+    <Content Include="demoTimePicker\mobiscoll\css\mobiscroll_002.css" />
+    <Content Include="demoTimePicker\mobiscoll\css\mobiscroll_003.css" />
+    <Content Include="demoTimePicker\mobiscoll\index.html" />
+    <Content Include="demoTimePicker\mobiscoll\js\jquery-1.js" />
+    <Content Include="demoTimePicker\mobiscoll\js\jquery.1.7.2.min.js" />
+    <Content Include="demoTimePicker\mobiscoll\js\mobiscroll.js" />
+    <Content Include="demoTimePicker\mobiscoll\js\mobiscroll_002.js" />
+    <Content Include="demoTimePicker\mobiscoll\js\mobiscroll_003.js" />
+    <Content Include="demoTimePicker\mobiscoll\js\mobiscroll_004.js" />
+    <Content Include="demoTimePicker\mobiscoll\js\mobiscroll_005.js" />
+    <Content Include="demoTimePicker\zeptotime\demo.html" />
+    <Content Include="demoTimePicker\zeptotime\readme.md" />
+    <Content Include="demoTimePicker\zeptotime\zepto.js" />
+    <Content Include="demoTimePicker\zeptotime\zepto.mdatetimer.css" />
+    <Content Include="demoTimePicker\zeptotime\zepto.mdatetimer.js" />
     <Content Include="demo\1.3创建课程表.html" />
     <Content Include="demo\2.1创建简单菜单.html" />
     <Content Include="demo\2.2创建链接按钮.html" />
@@ -436,9 +464,11 @@
     <Content Include="demo\7.1Ajax方式发送表单.html" />
     <Content Include="demo\7.2添加复合tree到表单.html" />
     <Content Include="demo\7.3表单检验.html" />
-    <Content Include="iscoll\index.html" />
-    <Content Include="mobiscoll\index.html" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="packages.config" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\easyloader.js" />
     <Content Include="Scripts\jquery-1.11.3.min.map" />
     <Content Include="demo\datagrid_data.json" />
@@ -1194,17 +1224,25 @@
     <Content Include="Scripts\jquery-easyui-1.4.5\demo\tree\tree_data2.json" />
     <Content Include="Scripts\jquery-easyui-1.4.5\themes\material\images\Thumbs.db" />
     <Content Include="demo\products.json" />
-    <Content Include="zeptotime\demo.html" />
-    <Content Include="zeptotime\zepto.js" />
-    <Content Include="zeptotime\zepto.mdatetimer.css" />
-    <Content Include="zeptotime\zepto.mdatetimer.js" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-    <Content Include="zeptotime\readme.md" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="demo\1.1基本拖放.html" />
@@ -2085,12 +2123,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="iscoll\css\" />
-    <Folder Include="iscoll\js\" />
-    <Folder Include="mobiscoll\css\" />
-    <Folder Include="mobiscoll\js\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
